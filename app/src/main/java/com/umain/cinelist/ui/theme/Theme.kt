@@ -54,6 +54,7 @@ fun CinelistTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
+        shapes = CineListShapes,
         content = content
     )
 }
