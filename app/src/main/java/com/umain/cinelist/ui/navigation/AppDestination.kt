@@ -8,4 +8,5 @@ sealed class AppDestination(val route: String) {
     }
     data object WatchList : AppDestination("watchlist")
 
-}
+    }
+
