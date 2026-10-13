@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.coil.network.okhttp)
     implementation(libs.converter.gson)
     implementation(libs.retrofit)
+    implementation(libs.retrofit.kotlinx.serialization)
+    implementation(libs.okhttp.logging)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
