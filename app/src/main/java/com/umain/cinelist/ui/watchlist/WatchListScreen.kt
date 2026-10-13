@@ -5,5 +5,5 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun WatchListScreen() {
-    Text(text = "Home")
+    Text(text = "Watchlist")
 }
