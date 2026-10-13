@@ -32,10 +32,10 @@ object RetrofitClient {
         .addInterceptor(loggingInterceptor)
         .build()
 
-    val api: TmdbApi = Retrofit.Builder()
+    val api: TmdbApiService = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(okHttpClient)
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
         .build()
-        .create(TmdbApi::class.java)
+        .create(TmdbApiService::class.java)
 }
