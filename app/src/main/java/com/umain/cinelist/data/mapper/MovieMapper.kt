@@ -15,3 +15,16 @@ fun MovieDto.toDomain(): Movie {
         genreIds = genreIds
     )
 }
+
+fun MovieDetailDto.toDomain(): Movie {
+    return Movie(
+        id = id,
+        title = title,
+        posterPath = posterPath,
+        voteAverage = voteAverage,
+        overview = overview,
+        backdropPath = backdropPath,
+        releaseDate = releaseDate,
+        genreIds = genres.map { it.id }
+    )
+}
