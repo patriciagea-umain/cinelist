@@ -1,5 +1,6 @@
 package com.umain.cinelist.data.mapper
 
+import com.umain.cinelist.data.remote.dto.MovieDetailDto
 import com.umain.cinelist.data.remote.dto.MovieDto
 import com.umain.cinelist.domain.model.Movie
 
