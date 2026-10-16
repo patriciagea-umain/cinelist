@@ -6,6 +6,7 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +14,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,7 +22,9 @@ import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import com.umain.cinelist.R
+import kotlinx.coroutines.delay
 
 @Composable
 fun SplashScreen(
@@ -37,6 +41,10 @@ fun SplashScreen(
         ),
         label = "alpha"
     )
+    LaunchedEffect(Unit) {
+        delay(5000)
+        onHomeClick()
+    }
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -49,7 +57,8 @@ fun SplashScreen(
 
         Column(
             modifier = modifier.align(Alignment.Center),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Text(
                 text = "Cine List",
@@ -67,14 +76,11 @@ fun SplashScreen(
             Text(
                 text = "Connecting...",
                 modifier = Modifier.alpha(alpha),
-                style = MaterialTheme.typography.bodyLarge,
+                style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary,
                 textAlign = TextAlign.Center
             )
 
-            Button(onClick = { onHomeClick() }) {
-                Text(text = "Home")
             }
         }
-    }
     }
