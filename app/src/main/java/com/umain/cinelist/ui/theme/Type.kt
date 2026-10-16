@@ -36,7 +36,7 @@ val Typography = Typography(
     displayLarge = TextStyle(
         fontFamily = PoppinsFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 40.sp
+        fontSize = 55.sp
     ),
 
     headlineLarge = TextStyle(
@@ -57,7 +57,7 @@ val Typography = Typography(
     titleMedium = TextStyle(
         fontFamily = JakartaSansFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 16.sp
+        fontSize = 18.sp
     ),
     bodyMedium = TextStyle(
         fontFamily = InterFamily,
