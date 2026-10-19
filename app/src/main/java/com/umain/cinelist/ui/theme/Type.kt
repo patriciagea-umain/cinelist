@@ -38,6 +38,11 @@ val Typography = Typography(
         fontWeight = FontWeight.Bold,
         fontSize = 55.sp
     ),
+    displayMedium = TextStyle(
+        fontFamily = PoppinsFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 36.sp
+    ),
 
     headlineLarge = TextStyle(
         fontFamily = JakartaSansFamily,
